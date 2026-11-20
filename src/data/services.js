@@ -1,0 +1,227 @@
+/* Single source of truth for service content.
+   Used by the Home summary cards, Services page, footer and contact form. */
+
+export const SERVICE_GROUPS = [
+  { id: "registration", title: "Business registration" },
+  { id: "tax", title: "Tax & compliance" },
+  { id: "brand", title: "Brand & finance" },
+];
+
+export const SERVICES = [
+  {
+    id: "private-limited",
+    group: "registration",
+    icon: "building",
+    tone: "",
+    title: "Private Limited Company Registration",
+    cardTitle: "Private Limited Company",
+    formLabel: "Private Limited Company registration",
+    summary: "Register a company suited to growth, multiple founders and future investment.",
+    description:
+      "A private limited company is a separate legal entity owned by its shareholders and run by its directors. It is one of the most widely recognised structures for businesses that plan to grow, bring in partners or raise investment.",
+    suits: [
+      "Startups with two or more founders",
+      "Businesses planning to raise funding or add shareholders",
+      "Founders who want a structure with limited liability",
+    ],
+    help: [
+      "Explaining the structure and what ongoing compliance involves",
+      "Guidance on choosing and checking a company name",
+      "A document checklist for directors and shareholders",
+      "Preparing and filing the incorporation application",
+    ],
+    cta: "Enquire Now",
+    note: "Approval and timelines depend on the authorities and the documents provided.",
+  },
+  {
+    id: "llp",
+    group: "registration",
+    icon: "users",
+    tone: "",
+    title: "LLP (Limited Liability Partnership) Registration",
+    cardTitle: "LLP Registration",
+    formLabel: "LLP registration",
+    summary: "A partnership structure with limited liability for its partners.",
+    description:
+      "An LLP combines the flexibility of a partnership with the benefit of limited liability for its partners. It is often chosen by professionals and small teams who want a formal structure that is simpler to run than a company.",
+    suits: [
+      "Professional firms and consultancies",
+      "Two or more partners running a business together",
+      "Businesses not planning to raise equity investment soon",
+    ],
+    help: [
+      "Comparing an LLP with other structures for your situation",
+      "Name selection guidance and a partner document checklist",
+      "Assistance with incorporation filings",
+      "Guidance on preparing the LLP agreement",
+    ],
+    cta: "Enquire Now",
+    note: "Approval and timelines depend on the authorities and the documents provided.",
+  },
+  {
+    id: "opc",
+    group: "registration",
+    icon: "user",
+    tone: "",
+    title: "OPC (One Person Company) Registration",
+    cardTitle: "One Person Company",
+    formLabel: "OPC (One Person Company) registration",
+    summary: "A company structure designed for a single founder.",
+    description:
+      "A One Person Company lets a single founder set up a company with its own legal identity, without needing a second shareholder. It offers a company structure while keeping ownership with one person.",
+    suits: [
+      "Solo founders who want a company rather than a proprietorship",
+      "Individuals wanting to keep business and personal matters separate",
+      "Freelancers and consultants formalising their work",
+    ],
+    help: [
+      "Explaining eligibility and the role of a nominee",
+      "Guidance on name selection and required documents",
+      "Preparing and filing the incorporation application",
+      "Pointers on post-registration compliance",
+    ],
+    cta: "Enquire Now",
+    note: "Approval and timelines depend on the authorities and the documents provided.",
+  },
+  {
+    id: "proprietorship",
+    group: "registration",
+    icon: "store",
+    tone: "",
+    title: "Sole Proprietorship Registration Assistance",
+    cardTitle: "Sole Proprietorship",
+    formLabel: "Sole Proprietorship registration assistance",
+    summary: "Help with the registrations commonly needed to start trading on your own.",
+    description:
+      "A sole proprietorship is the simplest way to run a business on your own. There is no single registration that creates it — instead, owners usually obtain registrations such as GST, Udyam (MSME) or a local shop and establishment licence, depending on the business.",
+    suits: [
+      "Individuals starting a small shop, trade or service",
+      "First-time business owners testing an idea",
+      "Those who want minimal setup and paperwork",
+    ],
+    help: [
+      "Identifying which registrations may apply to your business",
+      "A document checklist for each registration",
+      "Assistance with applications and filings",
+      "Guidance if you later want to move to an LLP or company",
+    ],
+    cta: "Enquire Now",
+    note: "Applicable registrations vary by business type and location.",
+  },
+  {
+    id: "gst",
+    group: "tax",
+    icon: "receipt",
+    tone: "gold",
+    title: "GST Registration & Filing Assistance",
+    cardTitle: "GST Registration & Filing",
+    formLabel: "GST registration & filing",
+    summary: "Get registered under GST and stay on top of regular returns.",
+    description:
+      "Many businesses need to register under GST once they cross certain thresholds or carry out certain activities. After registration, regular returns need to be filed. We help you understand whether GST applies to you and keep your filings organised.",
+    suits: [
+      "New businesses checking whether GST registration is needed",
+      "Online sellers and service providers",
+      "Registered businesses wanting help with regular returns",
+    ],
+    help: [
+      "Guidance on whether registration may be required",
+      "Document checklist and application assistance",
+      "Help preparing and filing periodic GST returns",
+      "Reminders and support for keeping records in order",
+    ],
+    cta: "Get Assistance",
+    note: "GST requirements depend on your turnover, activities and location.",
+  },
+  {
+    id: "itr",
+    group: "tax",
+    icon: "file",
+    tone: "gold",
+    title: "Income Tax Return (ITR) Filing Assistance",
+    cardTitle: "Income Tax Return Filing",
+    formLabel: "Income Tax Return (ITR) filing",
+    summary: "Assistance preparing and filing ITRs for individuals and businesses.",
+    description:
+      "Filing your income tax return accurately and on time matters, whether you earn a salary, run a business or have income from several sources. We help you gather the right information and prepare your return.",
+    suits: [
+      "Salaried individuals and professionals",
+      "Freelancers, consultants and small business owners",
+      "Anyone with income from multiple sources",
+    ],
+    help: [
+      "A checklist of documents and details to gather",
+      "Guidance on identifying the applicable return form",
+      "Preparing and filing your return",
+      "Help understanding notices or next steps after filing",
+    ],
+    cta: "Get Assistance",
+    note: "Your tax position depends on your individual circumstances.",
+  },
+  {
+    id: "trademark",
+    group: "brand",
+    icon: "shieldCheck",
+    tone: "navy",
+    title: "Trademark Registration Assistance",
+    cardTitle: "Trademark Registration",
+    formLabel: "Trademark registration",
+    summary: "Help applying to protect your brand name or logo.",
+    description:
+      "Your brand name and logo are valuable. A trademark application is the formal step towards protecting them. We help you prepare, file and follow your application through the process.",
+    suits: [
+      "New businesses launching a brand name or logo",
+      "Established businesses that have not yet applied",
+      "Product sellers building a recognisable brand",
+    ],
+    help: [
+      "A preliminary search to look for similar existing marks",
+      "Guidance on choosing the relevant class(es)",
+      "Preparing and filing the application",
+      "Support with updates and responses during examination",
+    ],
+    cta: "Enquire Now",
+    note: "Registration is decided by the trademark registry; outcomes cannot be guaranteed.",
+  },
+  {
+    id: "accounting",
+    group: "brand",
+    icon: "chart",
+    tone: "navy",
+    title: "Accounting & Bookkeeping Services",
+    cardTitle: "Accounting & Bookkeeping",
+    formLabel: "Accounting & bookkeeping",
+    summary: "Organised books and records so you always know where your business stands.",
+    description:
+      "Well-kept books make tax filing smoother and help you make better business decisions. We help you record transactions, reconcile accounts and keep your financial records organised.",
+    suits: [
+      "Small businesses without an in-house accountant",
+      "Founders who want to spend less time on paperwork",
+      "Businesses preparing for GST or income tax filings",
+    ],
+    help: [
+      "Recording sales, purchases and expenses",
+      "Bank and account reconciliations",
+      "Periodic summaries of your financial position",
+      "Organised records ready for tax and compliance work",
+    ],
+    cta: "Get Assistance",
+    note: "Scope is agreed with you based on your business needs.",
+  },
+];
+
+export const SERVICE_OPTIONS = [
+  ...SERVICES.map((s) => ({ value: s.id, label: s.formLabel })),
+  { value: "not-sure", label: "Not sure — need guidance" },
+];
+
+export const SHORT_NAMES = {
+  "private-limited": "Private Limited",
+  llp: "LLP",
+  opc: "OPC",
+  proprietorship: "Sole Proprietorship",
+  gst: "GST",
+  itr: "ITR Filing",
+  trademark: "Trademark",
+  accounting: "Accounting",
+};

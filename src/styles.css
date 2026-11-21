@@ -367,6 +367,10 @@ p { margin: 0 0 1em; }
 }
 .cta-band h2 { color: #fff; margin-bottom: .3em; }
 .cta-band p { margin: 0; max-width: 560px; }
+.cta-band .cta-email { display: flex; align-items: center; gap: .5rem; margin-top: 1rem; font-size: .97rem; }
+.cta-band .cta-email svg { width: 18px; height: 18px; color: var(--gold-500); flex: none; }
+.cta-band .cta-email a { color: #fff; font-weight: 600; word-break: break-all; }
+.cta-band .cta-email a:hover { color: var(--gold-500); }
 .cta-band .btn-row { margin: 0; }
 @media (min-width: 860px) { .cta-band { grid-template-columns: 1.4fr auto; } }
 

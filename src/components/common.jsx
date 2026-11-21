@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { Link } from "react-router";
 import Icon from "./Icon.jsx";
+import { ConfigLink } from "./ConfigValue.jsx";
+import config, { isFilled } from "../config.js";
 
 const SITE = "VL Bizbridge";
 
@@ -41,6 +43,14 @@ export function CtaBand({ title, text, primary, secondary, soft = false }) {
           <div>
             <h2 id="cta-title">{title}</h2>
             <p>{text}</p>
+            {isFilled(config.email) && (
+              <p className="cta-email">
+                <Icon name="mail" />
+                <span>
+                  Prefer email? Write to <ConfigLink field="email" />
+                </span>
+              </p>
+            )}
           </div>
           <div className="btn-row">
             <Link className="btn btn-gold" to={primary.to}>

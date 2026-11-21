@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { ConfigLink } from "../components/ConfigValue.jsx";
 import { CtaBand, Notice, PageHero, usePageMeta } from "../components/common.jsx";
 
 const FAQ_GROUPS = [
@@ -83,8 +84,9 @@ const FAQ_GROUPS = [
         q: "How do I share documents with you?",
         a: (
           <p>
-            Once we have discussed your requirement, we will let you know how to share your documents. Please avoid
-            sending sensitive documents through the website enquiry form.
+            Once we have discussed your requirement, we will let you know how to share your documents securely. Please
+            avoid sending sensitive documents through the website enquiry form, or to <ConfigLink field="email" />{" "}
+            before we have agreed how to share them.
           </p>
         ),
       },
@@ -97,8 +99,18 @@ const FAQ_GROUPS = [
         q: "How do I get started?",
         a: (
           <p>
-            Fill in the <Link to="/contact">enquiry form</Link> or contact us by phone or email. Tell us what you need
-            and we will get back to you to understand your requirement and explain the next steps.
+            Fill in the <Link to="/contact">enquiry form</Link> or email us at <ConfigLink field="email" />. Tell us
+            what you need and we will get back to you to understand your requirement and explain the next steps.
+          </p>
+        ),
+      },
+      {
+        q: "How can I contact support?",
+        a: (
+          <p>
+            Email <ConfigLink field="email" /> with your question or the service you are interested in, or use the{" "}
+            <Link to="/contact">enquiry form</Link>. Please do not send sensitive documents or ID numbers until we have
+            discussed your requirement and agreed how to share them.
           </p>
         ),
       },

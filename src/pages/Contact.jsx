@@ -121,7 +121,9 @@ function EnquiryForm() {
       } catch {
         setStatus({
           type: "error",
-          text: "Sorry, your enquiry could not be sent just now. Please try again, or contact us by phone or email.",
+          text: isFilled(config.email)
+            ? `Sorry, your enquiry could not be sent just now. Please try again, or email us at ${config.email.trim()}.`
+            : "Sorry, your enquiry could not be sent just now. Please try again, or contact us by phone or email.",
         });
       } finally {
         setSending(false);

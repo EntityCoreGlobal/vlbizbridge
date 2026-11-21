@@ -8,8 +8,8 @@ const config = {
   // e.g. "+91 98765 43210"
   phone: "",
 
-  // e.g. "hello@yourdomain.com"
-  email: "",
+  // Support mailbox (GoDaddy Professional Email) — shown on the site
+  email: "support@vlbizbridge.com",
 
   // Office address (use \n for a line break)
   address: "",
@@ -24,11 +24,11 @@ const config = {
   // Pre-filled WhatsApp message
   whatsappMessage: "Hello VL Bizbridge, I would like some assistance with ",
 
-  // Where enquiries are sent: a form-handling endpoint (Formspree, Getform,
-  // or your own server) that accepts a JSON POST of
-  // { name, phone, email, service, message }.
-  // If empty and `email` is set, the form opens the visitor's email app instead.
-  formEndpoint: "",
+  // Enquiry form backend: API Gateway → Lambda → Amazon SES, which emails
+  // support@vlbizbridge.com (see infrastructure/). Accepts a JSON POST of
+  // { name, phone, email, service, message, website }.
+  // If emptied and `email` is set, the form opens the visitor's email app instead.
+  formEndpoint: "https://wwblj3kwj6.execute-api.us-east-1.amazonaws.com/contact",
 };
 
 export default config;

@@ -45,9 +45,9 @@ Also replace the placeholder story on the **About** page (`src/pages/About.jsx`,
 
 ## Deploying (AWS Amplify — same setup as EntityCore)
 
-- **Hosting:** AWS Amplify Hosting app in **ap-south-1**, connected to `EntityCoreGlobal/vlbizbridge` on GitHub. Every push to `main` builds and deploys automatically using `amplify.yml`.
-- **SPA routing:** Amplify rewrite rule `/<*>` → `/index.html` (`404-200`) so `/services`, `/contact` etc. work on refresh.
-- **Domain:** `www.vlbizbridge.com` is canonical; `vlbizbridge.com` redirects to it (Amplify redirect rule).
+- **Hosting:** AWS Amplify Hosting app `vlbizbridge` (`d1g20vxn9j9w65`) in **us-east-1**, connected to `EntityCoreGlobal/vlbizbridge` on GitHub. Every push to `main` builds and deploys automatically using `amplify.yml`.
+- **SPA routing:** Amplify rewrite rule (regex matching any path without a file extension) → `/index.html` with status `200`, so `/services`, `/contact` etc. work on refresh. (EntityCore's `404-200` rule is not enough here, because this is a client-routed React app rather than a static export.)
+- **Domain:** `www.vlbizbridge.com` is canonical; `vlbizbridge.com` redirects to it with a 301 (Amplify redirect rule).
 - **DNS:** Route 53 hosted zone for `vlbizbridge.com`. The domain is still registered at GoDaddy, with its nameservers pointed at Route 53. Make DNS changes in Route 53, not GoDaddy.
 - **TLS:** ACM certificate in **us-east-1** covering both names, attached to Amplify as a custom certificate (avoids the Amplify-managed-certificate bug hit on EntityCore).
 

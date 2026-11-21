@@ -20,10 +20,13 @@ export function LogoMark({ className = "brand-logo" }) {
 
 export default function Brand() {
   return (
-    <Link className="brand" to="/" aria-label="VL Biz Bridge home">
+    <Link className="brand" to="/" aria-label="VL Biz Bridge (Venture Links) home">
       <LogoMark />
-      <span className="brand-name" aria-hidden="true">
-        VL <span>Biz Bridge</span>
+      <span className="brand-text" aria-hidden="true">
+        <span className="brand-name">
+          VL <span>Biz Bridge</span>
+        </span>
+        <span className="brand-tagline">Venture Links</span>
       </span>
     </Link>
   );

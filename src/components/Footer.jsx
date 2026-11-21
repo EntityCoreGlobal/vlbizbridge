@@ -54,7 +54,9 @@ export default function Footer() {
             Information on this website is general in nature and is not legal, tax or financial advice. Requirements,
             timelines and outcomes depend on your circumstances and on the relevant authorities.
           </p>
-          <p>&copy; {new Date().getFullYear()} VL Bizbridge. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} VL Biz Bridge (Venture Links Biz Bridge). All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

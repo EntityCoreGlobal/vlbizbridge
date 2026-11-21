@@ -123,8 +123,8 @@ p { margin: 0 0 1em; }
 .brand { display: inline-flex; align-items: center; gap: .6rem; text-decoration: none; color: var(--navy-800); }
 .brand-text { display: flex; flex-direction: column; line-height: 1; }
 .brand-tagline {
-  margin-top: .32rem; font: 700 .66rem/1 var(--font-body);
-  letter-spacing: .22em; text-transform: uppercase; color: var(--gold-500);
+  margin-top: .3rem; font: 500 .74rem/1.2 var(--font-body);
+  letter-spacing: .01em; color: var(--ink-soft); white-space: nowrap;
 }
 .site-footer .brand-tagline { color: #aebbd0; }
 .brand-logo { width: 50px; height: 40px; flex: none; color: var(--navy-800); overflow: visible; }
@@ -452,4 +452,3 @@ p { margin: 0 0 1em; }
 .muted { color: var(--ink-soft); }
 .center { text-align: center; }
 .stack-lg > * + * { margin-top: 1.5rem; }
-.footer-tagline { margin: -.25rem 0 .75rem; color: var(--gold-500); font-weight: 600; font-style: italic; }

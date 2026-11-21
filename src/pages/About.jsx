@@ -17,8 +17,8 @@ export default function About() {
   return (
     <>
       <PageHero eyebrow="About us" title="Helping businesses take the next step with confidence">
-        VL Bizbridge is a business consultancy that helps individuals, startups and small businesses handle
-        registrations, tax filings, trademarks and accounting.
+        VL Biz Bridge (Venture Links Biz Bridge) is a business consultancy that helps individuals, startups and small
+        businesses handle registrations, tax filings, trademarks and accounting.
       </PageHero>
 
       <section className="section" aria-labelledby="story-title">

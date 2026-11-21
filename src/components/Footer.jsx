@@ -12,7 +12,6 @@ export default function Footer() {
         <div className="footer-grid">
           <div>
             <Brand />
-            {isFilled(config.tagline) && <p className="footer-tagline">{config.tagline}</p>}
             <p>
               Business registration, tax filing, trademark and accounting assistance for individuals, startups and
               small businesses.
@@ -57,7 +56,7 @@ export default function Footer() {
             timelines and outcomes depend on your circumstances and on the relevant authorities.
           </p>
           <p>
-            &copy; {new Date().getFullYear()} VL Biz Bridge (Venture Links Biz Bridge). All rights reserved.
+            &copy; {new Date().getFullYear()} Venture Links Biz Bridge. All rights reserved.
           </p>
         </div>
       </div>

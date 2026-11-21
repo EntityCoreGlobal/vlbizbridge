@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import config, { isFilled } from "../config.js";
 
 /**
  * VL Biz Bridge logo: a "VL" monogram (gold V joined to the L, with a teal
@@ -20,13 +21,13 @@ export function LogoMark({ className = "brand-logo" }) {
 
 export default function Brand() {
   return (
-    <Link className="brand" to="/" aria-label="VL Biz Bridge (Venture Links) home">
+    <Link className="brand" to="/" aria-label="VL Biz Bridge home">
       <LogoMark />
       <span className="brand-text" aria-hidden="true">
         <span className="brand-name">
           VL <span>Biz Bridge</span>
         </span>
-        <span className="brand-tagline">Venture Links</span>
+        {isFilled(config.tagline) && <span className="brand-tagline">{config.tagline}</span>}
       </span>
     </Link>
   );

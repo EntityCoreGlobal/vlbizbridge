@@ -18,7 +18,7 @@ const config = {
   address: "Laxman Nagar, Housing Board Colony\nBerhampur, Odisha 760002",
 
   // e.g. "Mon–Sat, 10:00 am – 6:30 pm"
-  hours: "",
+  hours: "Mon–Sat, 9:00 am – 8:00 pm",
 
   // WhatsApp number in international format, DIGITS ONLY (e.g. "919876543210").
   // The floating WhatsApp button stays hidden until this is filled in.

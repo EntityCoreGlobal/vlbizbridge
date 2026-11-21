@@ -34,7 +34,7 @@ function validate(input: Record<string, unknown>): { values?: Enquiry; errors?: 
     website: str(input.website),
   };
   const errors: Record<string, string> = {};
-  if (values.name.length < 2) errors.name = "Name is required.";
+  if (values.name.length < 2) errors.name = "Customer name is required.";
   const digits = values.phone.replace(/\D/g, "");
   if (digits.length < 10 || digits.length > 15) errors.phone = "A valid phone number is required.";
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(values.email)) errors.email = "A valid email is required.";
@@ -65,11 +65,11 @@ export const handler: APIGatewayProxyHandlerV2 = async (event) => {
   const text = [
     "New enquiry from the VL Bizbridge website",
     "",
-    `Name:     ${values.name}`,
-    `Phone:    ${values.phone}`,
-    `Email:    ${values.email}`,
-    `Service:  ${values.service}`,
-    `Received: ${submittedAt} IST`,
+    `Customer name: ${values.name}`,
+    `Phone:         ${values.phone}`,
+    `Email:         ${values.email}`,
+    `Service:       ${values.service}`,
+    `Received:      ${submittedAt} IST`,
     "",
     "Message:",
     values.message || "(no message)",

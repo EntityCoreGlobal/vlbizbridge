@@ -3,6 +3,7 @@ import Brand from "./Brand.jsx";
 import { NAV_ITEMS } from "./Header.jsx";
 import { ConfigLink, ConfigText } from "./ConfigValue.jsx";
 import { SERVICES } from "../data/services.js";
+import config, { isFilled } from "../config.js";
 
 export default function Footer() {
   return (
@@ -11,6 +12,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div>
             <Brand />
+            {isFilled(config.tagline) && <p className="footer-tagline">{config.tagline}</p>}
             <p>
               Business registration, tax filing, trademark and accounting assistance for individuals, startups and
               small businesses.

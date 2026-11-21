@@ -5,14 +5,17 @@
    Leave a value as "" to keep showing the placeholder text.
    ========================================================= */
 const config = {
+  // Business tagline
+  tagline: "Bridging idea to business",
+
   // e.g. "+91 98765 43210"
-  phone: "",
+  phone: "+91 97783 49123",
 
   // Support mailbox (GoDaddy Professional Email) — shown on the site
   email: "support@vlbizbridge.com",
 
   // Office address (use \n for a line break)
-  address: "",
+  address: "Laxman Nagar, Housing Board Colony\nBerhampur, Odisha 760002",
 
   // e.g. "Mon–Sat, 10:00 am – 6:30 pm"
   hours: "",

@@ -452,3 +452,4 @@ p { margin: 0 0 1em; }
 .muted { color: var(--ink-soft); }
 .center { text-align: center; }
 .stack-lg > * + * { margin-top: 1.5rem; }
+.footer-tagline { margin: -.25rem 0 .75rem; color: var(--gold-500); font-weight: 600; font-style: italic; }

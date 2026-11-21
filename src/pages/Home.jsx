@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import Icon, { IconBadge } from "../components/Icon.jsx";
 import { ArrowLink, CtaBand, usePageMeta, Value } from "../components/common.jsx";
 import { SERVICES } from "../data/services.js";
+import config from "../config.js";
 
 const HERO_POINTS = [
   "Guidance in simple, jargon-free language",
@@ -26,7 +27,7 @@ export default function Home() {
       <section className="hero" aria-labelledby="hero-title">
         <div className="container hero-grid">
           <div>
-            <span className="eyebrow">Business registration &amp; compliance assistance</span>
+            <span className="eyebrow">{config.tagline}</span>
             <h1 id="hero-title">
               Start, register and run your business <span className="accent">with clarity.</span>
             </h1>

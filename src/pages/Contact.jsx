@@ -9,7 +9,7 @@ import { SERVICE_OPTIONS } from "../data/services.js";
 const EMPTY = { name: "", phone: "", email: "", service: "", message: "", consent: false, website: "" };
 
 const RULES = {
-  name: (v) => (v.trim().length >= 2 ? "" : "Please enter your name."),
+  name: (v) => (v.trim().length >= 2 ? "" : "Please enter the customer name."),
   phone: (v) => {
     const d = v.replace(/\D/g, "");
     return d.length >= 10 && d.length <= 15 ? "" : "Please enter a valid phone number (at least 10 digits).";
@@ -133,7 +133,7 @@ function EnquiryForm() {
 
     if (isFilled(config.email)) {
       const body =
-        `Name: ${data.name}\nPhone: ${data.phone}\nEmail: ${data.email}\n` +
+        `Customer name: ${data.name}\nPhone: ${data.phone}\nEmail: ${data.email}\n` +
         `Service of interest: ${data.service}\n\n${data.message}`;
       window.location.href =
         `mailto:${config.email.trim()}?subject=${encodeURIComponent(`Website enquiry: ${data.service}`)}` +
@@ -159,7 +159,7 @@ function EnquiryForm() {
         </div>
       )}
       <div className="form-grid">
-        <Field id="name" label="Full name" required error={errors.name}>
+        <Field id="name" label="Customer name" required error={errors.name}>
           <input
             id="name" name="name" type="text" autoComplete="name" required
             value={values.name} onChange={onChange} onBlur={onBlur}

@@ -43,13 +43,17 @@ Also replace the placeholder story on the **About** page (`src/pages/About.jsx`,
 
 `/contact?service=<id>`. IDs: `private-limited`, `llp`, `opc`, `proprietorship`, `gst`, `itr`, `trademark`, `accounting`, `not-sure`.
 
-## Deploying
+## Deploying (AWS Amplify — same setup as EntityCore)
 
-Upload the `dist/` folder to any static host. Because this uses clean URLs (`/services`), the host must serve `index.html` for unknown paths:
+- **Hosting:** AWS Amplify Hosting app in **ap-south-1**, connected to `EntityCoreGlobal/vlbizbridge` on GitHub. Every push to `main` builds and deploys automatically using `amplify.yml`.
+- **SPA routing:** Amplify rewrite rule `/<*>` → `/index.html` (`404-200`) so `/services`, `/contact` etc. work on refresh.
+- **Domain:** `www.vlbizbridge.com` is canonical; `vlbizbridge.com` redirects to it (Amplify redirect rule).
+- **DNS:** Route 53 hosted zone for `vlbizbridge.com`. The domain is still registered at GoDaddy, with its nameservers pointed at Route 53. Make DNS changes in Route 53, not GoDaddy.
+- **TLS:** ACM certificate in **us-east-1** covering both names, attached to Amplify as a custom certificate (avoids the Amplify-managed-certificate bug hit on EntityCore).
 
-- **Netlify** — handled by `public/_redirects`.
-- **Vercel** — works out of the box for Vite projects (or add a rewrite to `/index.html`).
-- **Apache/cPanel** — add an `.htaccess` rewrite to `index.html`.
+To publish changes: commit and push to `main`, then watch the build in Amplify Console → vlbizbridge → main.
+
+Other static hosts also work (upload `dist/`); they must serve `index.html` for unknown paths (`public/_redirects` covers Netlify).
 
 ## SEO note
 

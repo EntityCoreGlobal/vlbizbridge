@@ -291,6 +291,12 @@ p { margin: 0 0 1em; }
 .service-body h3 { font-size: .95rem; text-transform: uppercase; letter-spacing: .08em; color: var(--teal-700); margin-bottom: .6rem; }
 .service-cta { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; padding-top: 1.25rem; border-top: 1px dashed var(--line); }
 .service-cta small { color: var(--ink-soft); }
+.price { display: flex; flex-direction: column; line-height: 1.2; margin-right: .75rem; }
+.price-label { font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-soft); }
+.price-amount { font-size: 1.5rem; color: var(--navy-800); }
+.price-note { font-size: .85rem; color: var(--ink-soft); }
+.card .card-price { margin: .25rem 0 1rem; font-size: .9rem; }
+.card .card-price strong { font-size: 1.15rem; color: var(--navy-800); }
 @media (min-width: 800px) { .service-body { grid-template-columns: 1fr 1fr; gap: 2.5rem; } }
 
 .check-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; }

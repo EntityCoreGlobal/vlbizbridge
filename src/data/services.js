@@ -10,6 +10,8 @@ export const SERVICE_GROUPS = [
 export const SERVICES = [
   {
     id: "private-limited",
+    price: 10999,
+    priceNote: "+ Govt. fees & DSC extra",
     group: "registration",
     icon: "building",
     tone: "",
@@ -35,6 +37,8 @@ export const SERVICES = [
   },
   {
     id: "llp",
+    price: 6999,
+    priceNote: "+ Govt. fees & DSC extra",
     group: "registration",
     icon: "users",
     tone: "",
@@ -60,6 +64,8 @@ export const SERVICES = [
   },
   {
     id: "opc",
+    price: 8999,
+    priceNote: "+ Govt. fees & DSC extra",
     group: "registration",
     icon: "user",
     tone: "",
@@ -85,6 +91,8 @@ export const SERVICES = [
   },
   {
     id: "proprietorship",
+    price: 1999,
+    priceNote: "+ Govt. fees extra",
     group: "registration",
     icon: "store",
     tone: "",
@@ -109,7 +117,36 @@ export const SERVICES = [
     note: "Applicable registrations vary by business type and location.",
   },
   {
+    id: "partnership",
+    price: 4999,
+    priceNote: "+ Govt. fees extra",
+    group: "registration",
+    icon: "briefcase",
+    tone: "",
+    title: "Partnership Firm Registration",
+    cardTitle: "Partnership Firm",
+    formLabel: "Partnership Firm registration",
+    summary: "Set up a business with two or more partners under a partnership deed.",
+    description:
+      "A partnership firm is a simple way for two or more people to run a business together. It is formed through a partnership deed and can be registered with the Registrar of Firms, which makes it easier to open bank accounts and enforce rights between partners.",
+    suits: [
+      "Family businesses and small trading firms",
+      "Two or more people starting a business with modest setup costs",
+      "Partners who want a simple structure without company-level compliance",
+    ],
+    help: [
+      "Explaining how a partnership firm compares with an LLP",
+      "Drafting the partnership deed and a partner document checklist",
+      "Assistance with registration and PAN for the firm",
+      "Guidance on the registrations the firm may need next, such as GST",
+    ],
+    cta: "Enquire Now",
+    note: "Registration requirements and timelines vary by state.",
+  },
+  {
     id: "gst",
+    price: 999,
+    priceNote: "GST registration · + Govt. fees extra",
     group: "tax",
     icon: "receipt",
     tone: "gold",
@@ -210,6 +247,8 @@ export const SERVICES = [
   },
 ];
 
+export const formatPrice = (n) => `₹${n.toLocaleString("en-IN")}`;
+
 export const SERVICE_OPTIONS = [
   ...SERVICES.map((s) => ({ value: s.id, label: s.formLabel })),
   { value: "not-sure", label: "Not sure — need guidance" },
@@ -220,6 +259,7 @@ export const SHORT_NAMES = {
   llp: "LLP",
   opc: "OPC",
   proprietorship: "Sole Proprietorship",
+  partnership: "Partnership Firm",
   gst: "GST",
   itr: "ITR Filing",
   trademark: "Trademark",

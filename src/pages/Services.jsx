@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { IconBadge } from "../components/Icon.jsx";
 import { CheckList, CtaBand, PageHero, usePageMeta } from "../components/common.jsx";
-import { SERVICE_GROUPS, SERVICES, SHORT_NAMES } from "../data/services.js";
+import { formatPrice, SERVICE_GROUPS, SERVICES, SHORT_NAMES } from "../data/services.js";
 
 function ServiceSection({ service: s }) {
   const titleId = `${s.id}-title`;
@@ -25,6 +25,13 @@ function ServiceSection({ service: s }) {
         </div>
       </div>
       <div className="service-cta">
+        {s.price != null && (
+          <div className="price">
+            <span className="price-label">Professional fee</span>
+            <strong className="price-amount">{formatPrice(s.price)}</strong>
+            <span className="price-note">{s.priceNote}</span>
+          </div>
+        )}
         <Link className="btn btn-primary" to={`/contact?service=${s.id}`}>
           {s.cta}
           <span className="visually-hidden"> for {s.cardTitle}</span>
@@ -38,7 +45,7 @@ function ServiceSection({ service: s }) {
 export default function Services() {
   usePageMeta(
     "Services | VL Bizbridge – Company, LLP, OPC, GST, ITR, Trademark & Accounting",
-    "Explore VL Bizbridge services: Private Limited, LLP, OPC and proprietorship registration, GST registration and filing, ITR filing, trademark registration and bookkeeping."
+    "Explore VL Bizbridge services: Private Limited, LLP, OPC, partnership firm and proprietorship registration, GST registration and filing, ITR filing, trademark registration and bookkeeping."
   );
 
   return (

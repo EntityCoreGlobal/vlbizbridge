@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import Icon, { IconBadge } from "../components/Icon.jsx";
 import { ArrowLink, CtaBand, usePageMeta, Value } from "../components/common.jsx";
-import { SERVICES } from "../data/services.js";
+import { formatPrice, SERVICES } from "../data/services.js";
 
 const HERO_POINTS = [
   "Guidance in simple, jargon-free language",
@@ -88,6 +88,11 @@ export default function Home() {
                 <IconBadge name={s.icon} tone={s.tone} />
                 <h3>{s.cardTitle}</h3>
                 <p>{s.summary}</p>
+                {s.price != null && (
+                  <p className="card-price">
+                    <strong>{formatPrice(s.price)}</strong> <span>{s.priceNote}</span>
+                  </p>
+                )}
                 <ArrowLink to={`/services#${s.id}`} srText={`about ${s.cardTitle}`}>
                   Learn more
                 </ArrowLink>

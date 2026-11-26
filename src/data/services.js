@@ -92,7 +92,7 @@ export const SERVICES = [
   {
     id: "proprietorship",
     price: 1999,
-    priceNote: "+ Govt. fees extra",
+    priceNote: "No additional or hidden charges",
     group: "registration",
     icon: "store",
     tone: "",
